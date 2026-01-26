@@ -1,0 +1,26 @@
+%sdt_rtld:unmap_start=unmap_start
+p:sdt_rtld/unmap_start /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x1e81 arg1=%r15:s64 arg2=%r12:u64
+%sdt_rtld:unmap_complete=unmap_complete
+p:sdt_rtld/unmap_complete /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x2116 arg1=%r15:s64 arg2=%bx:u64
+%sdt_rtld:map_start=map_start
+p:sdt_rtld/map_start /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x8957 arg1=+40(%bp):s64 arg2=%bx:u64
+%sdt_rtld:reloc_start=reloc_start
+p:sdt_rtld/reloc_start /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0xcdee arg1=+32(%ax):s64 arg2=%si:u64
+%sdt_rtld:map_complete=map_complete
+p:sdt_rtld/map_complete /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0xd99d arg1=+32(%bx):s64 arg2=%r14:u64 arg3=%r15:u64
+%sdt_rtld:reloc_complete=reloc_complete
+p:sdt_rtld/reloc_complete /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0xdc4f arg1=+32(%bx):s64 arg2=-72(%bp):u64 arg3=%r15:u64
+%sdt_rtld:init_start=init_start
+p:sdt_rtld/init_start /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x2236c arg2=%r14:u64
+%sdt_rtld:init_complete=init_complete
+p:sdt_rtld/init_complete /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x22891 arg2=%bx:u64
+%sdt_rtld:lll_lock_wait_private=lll_lock_wait_private
+p:sdt_rtld/lll_lock_wait_private /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x25ea6 arg1=%di:u64
+%sdt_rtld:lll_lock_wait=lll_lock_wait
+p:sdt_rtld/lll_lock_wait /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x25f09 arg1=%di:u64
+%sdt_rtld:setjmp=setjmp
+p:sdt_rtld/setjmp /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x26041 arg1=%di:u64 arg2=%si:s32 arg3=%ax:u64
+%sdt_rtld:longjmp=longjmp
+p:sdt_rtld/longjmp /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x260f1 arg1=%di:u64 arg2=%si:s32 arg3=%dx:u64
+%sdt_rtld:longjmp_target=longjmp_target
+p:sdt_rtld/longjmp_target /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2:0x2610d arg1=%di:u64 arg2=%ax:s32 arg3=%dx:u64
